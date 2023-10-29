@@ -1,4 +1,7 @@
-const queryString = window.location.search
-const urlParams = new URLSearchParams(queryString)
-const to = urlParams.get("to")
-document.querySelector(".elementor-heading-title").innerHTML = to
+const urlParams = new URLSearchParams(window.location.search)
+const nama = urlParams.get("n") || "Tamu Undangan"
+const namaContainer = document.querySelector("#tamu")
+namaContainer.innerText = `${nama}`
+
+console.log(urlParams)
+// document.querySelector("#nama").value = nama
